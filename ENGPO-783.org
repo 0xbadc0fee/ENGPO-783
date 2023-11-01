@@ -17,8 +17,10 @@ Basic project.  No I/O's.  Program converts CAN messages to RS232.
   + Google Drive (https://drive.google.com/drive/folders/1O7ZFR9QbyhWxfyTNf-_Wj9uYojleCJjX?usp=drive_link)
   + github (?)
 ** TODO Progress Tracker [14%]
-*** DONE Original Project Review
+*** DONE Original Project Review [2/2]
 CLOSED: [2023-10-31 Tue 15:02]
+ - [X] Review all provided docs
+ - [X] Use codesys to confirm provided program opens and builds (witsconverter.pro)
 Footnotes: no questions
 *** TODO Base Project Creation [5/8]
 - [X] LogiCAD installed ?
