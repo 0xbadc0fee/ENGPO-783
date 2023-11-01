@@ -1,7 +1,9 @@
 #+TITLE:ENGPO-783 Journal
 #+AUTHOR:Silas Curfman
 #+OPTIONS: ^:nil
+#+OPTIONS: toc:nil
 * NOV - WITS Project Conversion
+#+TOC: headlines 3
 ** Summary
 Convert existing customer project from (ESX-IOxp + CodeSys) to (ESX-4CT + LogiCAD)
 ** Deliverables
