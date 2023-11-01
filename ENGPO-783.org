@@ -1,0 +1,93 @@
+#+TITLE:ENGPO-783 Journal
+#+AUTHOR:Silas Curfman
+#+OPTIONS: html-syle:nil
+#+OPTIONS: org-html-head-include-default-style:nil
+#+SETUPFILE: mysetup.org
+
+* ENGPO-783 Journal
+** Summary
+Convert existing customer project from (ESX-IOxp + CodeSys) to (ESX-4CT + LogiCAD)
+** Deliverables
+** Toolchains
+Basic project.  No I/O's.  Program converts CAN messages to RS232.
++ CodeSys v2.3
++ LogiCAD
++ CodeSys conversion tool
++ OpenSYDE (mostly for flashing, no data pools)
++ Documentation (tbd)
++ Collaboration:
+  + Jira
+  + Google Drive (https://drive.google.com/drive/folders/1O7ZFR9QbyhWxfyTNf-_Wj9uYojleCJjX?usp=drive_link)
+  + github (?)
+** TODO Progress Tracker [14%]
+*** DONE Original Project Review
+CLOSED: [2023-10-31 Tue 15:02]
+Notes: no questions
+*** TODO Base Project Creation [5/8]
+- [X] LogiCAD installed ?
+- [X] OpenSYDE installed ?
+- [X] Conversion Tool installed (lc3_codesys_converter.zip, plugin, bundle.info edit, & test)?
+  - <2023-11-01 Wed> Had trouble with conversion tool.  Was using LogiCAD 3.6, moving to 3.22, and try again.
+  - <2023-11-01 Wed 09:01> upgraded to logicad 3.22, edited bundles.info, added plugins directory. FIXED
+- [X] CodeSys v2.3 installed ?
+- [X] Open customer project .PRO file in CodeSys ?
+- [ ] Create empty OpenSyde project, launch logicad ide, test import a component from EXP file.
+- [ ] Add ESX-4CT TSP to openSyde
+- [ ] Add ESX-4CT TSP to logiCad
+Footnotes:
++ Elements available to import from wits-converter.exp:
+  + ADD_PADDING (FUNCTION)
+  + CAN2ErrorHandling (PROGRAM)
+  + CHEM_UNIT_CONVERT (FUNCTION)
+  + CONSTANTS (GVL)
+  + EDataChannel (DATATYPE)
+  + ESerialState (DATATYPE)
+  + FIND_ITEM_BY_PRIORITY (FUNCTION)
+  + F_FLOAT_TO_STRING (FUNCTION)
+  + F_RANDOM_CONFIG (FUNCTION)
+  + F_UNIT_TO_STRING (FUNCTION)
+  + Global_Variables (GVL)
+  + HANDLE_EEPROM (PROGRAM)
+  + HANDLE_HMI_CAN (PROGRAM)
+  + HANDLE_RS232_SERIAL (PROGRAM)
+  + J1939_DECODE (FUNCTION)
+  + J1939_ENCODE (FUNCTION)
+  + J1939_READ_PGN (FUNCTION)
+  + J1939_SEND_PGN (FUNCTION)
+  + MEMCMP (FUNCTION)
+  + MEMCPY (FUNCTION)
+  + PLC_PRG (PROGRAM)
+  + READ_CAN_MSG (FUNCTION)
+  + READ_WITS_CONFIG (PROGRAM)
+  + REQUEST_PGN (FUNCTION)
+  + SEND_CAN_MSG (FUNCTION)
+  + SEND_WITS_CONFIG (PROGRAM)
+  + SERIAL_PRINT (FUNCTION)
+  + STRSIZE (FUNCTION)
+  + TConfigData (DATATYPE)
+  + TJ1939Msg (DATATYPE)
+  + TSerialConfig (DATATYPE)
+  + TWITSitem (DATATYPE)
+  + Variable_Configuration (GVL)
+  + errno_t (DATATYPE)
++ QUE: when installing conversion tool to logicad, get 'Path too long' errors, checking How-to text.
+  + ANS: don't uznip.  just navigate to plugin folder and copy to desired plugins directory.
++ QUE: any benefit to importing a blank codesys 2.3 project just to see what global structure comes in by defalut?
+  + ANS: only elements imported via a blank codesys project (ESX-IOxp template) are:
+    + Global_Variables (GVL)
+    + PLC_PRG (PROGRAM)
+    + Variable_Configuration (GVL)
+*** TODO CodeSys 2.3 EXPORT/IMPORT [0/5]
+- [ ] ENUMS
+- [ ] FUNCTIONS
+- [ ] GLOBALS
+- [ ] PROGRAMS
+- [ ] STRUCTURES
+Notes:
+*** TODO PLC Config Conversion & Testing
+Notes:
+*** TODO Complete System Testing
+Notes:
+*** TODO Project Handoff
+Notes:
+

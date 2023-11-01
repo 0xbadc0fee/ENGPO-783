@@ -1,0 +1,85 @@
+                          ___________________
+
+                           ENGPO-783 JOURNAL
+
+                             Silas Curfman
+                          ___________________
+
+
+1 ENGPO-783 Journal
+===================
+
+1.1 Summary
+~~~~~~~~~~~
+
+  Convert existing customer project from (ESX-IOxp + CodeSys) to
+  (ESX-4CT + LogiCAD)
+
+
+1.2 Deliverables
+~~~~~~~~~~~~~~~~
+
+
+1.3 Toolchains
+~~~~~~~~~~~~~~
+
+  Basic project. No I/O's. Program converts CAN messages to RS232.
+  + CodeSys v2.3
+  + LogiCAD
+  + CodeSys conversion tool
+  + OpenSYDE (mostly for flashing, no data pools)
+  + Documentation (tbd)
+  + Collaboration:
+    + Jira
+    + Google Drive
+      (<https://drive.google.com/drive/folders/1O7ZFR9QbyhWxfyTNf-_Wj9uYojleCJjX?usp=drive_link>)
+    + github (?)
+
+
+1.4 TODO Tasks [14%]
+~~~~~~~~~~~~~~~~~~~~
+
+1.4.1 DONE Original Project Review
+----------------------------------
+
+  Notes: no questions
+
+
+1.4.2 TODO Base Project Creation [3/5]
+--------------------------------------
+
+  - [X] LogiCAD installed ?
+  - [X] OpenSYDE installed ?
+  - [ ] Conversion Tool installed ?
+  - [ ] CodeSys v2.3 installed ?
+  - [X] Open customer project .PRO file in CodeSys ?
+  Notes:
+
+
+1.4.3 TODO CodeSys 2.3 EXPORT/IMPORT [0/5]
+------------------------------------------
+
+  - [ ] ENUMS
+  - [ ] FUNCTIONS
+  - [ ] GLOBALS
+  - [ ] PROGRAMS
+  - [ ] STRUCTURES
+  Notes:
+
+
+1.4.4 TODO PLC Config Conversion & Testing
+------------------------------------------
+
+  Notes:
+
+
+1.4.5 TODO Complete System Testing
+----------------------------------
+
+  Notes:
+
+
+1.4.6 TODO Project Handoff
+--------------------------
+
+  Notes:
