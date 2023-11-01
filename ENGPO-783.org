@@ -1,9 +1,6 @@
 #+TITLE:ENGPO-783 Journal
 #+AUTHOR:Silas Curfman
-#+OPTIONS: html-syle:nil
-#+OPTIONS: org-html-head-include-default-style:nil
-#+SETUPFILE: mysetup.org
-
+#+OPTIONS: ^:nil
 * NOV - WITS Project Conversion
 ** Summary
 Convert existing customer project from (ESX-IOxp + CodeSys) to (ESX-4CT + LogiCAD)
@@ -22,7 +19,7 @@ Basic project.  No I/O's.  Program converts CAN messages to RS232.
 ** TODO Progress Tracker [14%]
 *** DONE Original Project Review
 CLOSED: [2023-10-31 Tue 15:02]
-Notes: no questions
+Footnotes: no questions
 *** TODO Base Project Creation [5/8]
 - [X] LogiCAD installed ?
 - [X] OpenSYDE installed ?
@@ -83,11 +80,11 @@ Footnotes:
 - [ ] GLOBALS
 - [ ] PROGRAMS
 - [ ] STRUCTURES
-Notes:
+Footnotes:
 *** TODO PLC Config Conversion & Testing
-Notes:
+Footnotes:
 *** TODO Complete System Testing
-Notes:
+Footnotes:
 *** TODO Project Handoff
-Notes:
+Footnotes:
 
