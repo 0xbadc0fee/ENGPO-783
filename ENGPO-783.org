@@ -2,8 +2,18 @@
 #+AUTHOR:Silas Curfman
 #+OPTIONS: ^:nil
 #+OPTIONS: toc:nil
+#+SETUPFILE: theme-readtheorg.setup
 * NOV - WITS Project Conversion
 #+TOC: headlines 3
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2023-11-07 Tue 13:51]
+| Headline                      | Time   |      |
+|-------------------------------+--------+------|
+| *Total time*                  | *2:31* |      |
+|-------------------------------+--------+------|
+| NOV - WITS Project Conversion | 2:31   |      |
+| \_  Progress Tracker [33%]    |        | 2:31 |
+#+END:
 ** Summary
 Convert existing customer project from (ESX-IOxp + CodeSys) to (ESX-4CT + LogiCAD)
 ** Deliverables
@@ -18,13 +28,17 @@ Basic project.  No I/O's.  Program converts CAN messages to RS232.
   + Jira
   + Google Drive (https://drive.google.com/drive/folders/1O7ZFR9QbyhWxfyTNf-_Wj9uYojleCJjX?usp=drive_link)
   + github (?)
-** TODO Progress Tracker [14%]
+** TODO Progress Tracker [33%]
 *** DONE Original Project Review [2/2]
 CLOSED: [2023-10-31 Tue 15:02]
  - [X] Review all provided docs
  - [X] Use codesys to confirm provided program opens and builds (witsconverter.pro)
 Footnotes: no questions
-*** TODO Base Project Creation [5/8]
+*** DONE Base Project Creation [8/8]
+CLOSED: [2023-11-07 Tue 12:37]
+:LOGBOOK:
+CLOCK: [2023-11-07 Tue 11:21]--[2023-11-07 Tue 12:37] =>  1:16
+:END:
 - [X] LogiCAD installed ?
 - [X] OpenSYDE installed ?
 - [X] Conversion Tool installed (lc3_codesys_converter.zip, plugin, bundle.info edit, & test)?
@@ -32,9 +46,9 @@ Footnotes: no questions
   - <2023-11-01 Wed 09:01> upgraded to logicad 3.22, edited bundles.info, added plugins directory. FIXED
 - [X] CodeSys v2.3 installed ?
 - [X] Open customer project .PRO file in CodeSys ?
-- [ ] Create empty OpenSyde project, launch logicad ide, test import a component from EXP file.
-- [ ] Add ESX-4CT TSP to openSyde
-- [ ] Add ESX-4CT TSP to logiCad
+- [X] Create empty OpenSyde project, launch logicad ide, test import a component from EXP file.
+- [X] Add ESX-4CT TSP to openSyde
+- [X] Add ESX-4CT TSP to logiCad
 Footnotes:
 + Elements available to import from wits-converter.exp:
   + ADD_PADDING (FUNCTION)
@@ -78,13 +92,37 @@ Footnotes:
     + Global_Variables (GVL)
     + PLC_PRG (PROGRAM)
     + Variable_Configuration (GVL)
-*** TODO CodeSys 2.3 EXPORT/IMPORT [0/5]
-- [ ] ENUMS
-- [ ] FUNCTIONS
-- [ ] GLOBALS
-- [ ] PROGRAMS
-- [ ] STRUCTURES
-Footnotes:
+*** TODO CodeSys 2.3 EXPORT/IMPORT [0/6]
+**** TODO Program Template / Setup
+:LOGBOOK:
+CLOCK: [2023-11-07 Tue 12:40]--[2023-11-07 Tue 13:49] =>  1:09
+:END:
+- [-] Prepare blank OpenSyde Project
+  - [X] +add 4CT+
+  - [X] +add CAN1.  Join 4CT to CAN1.+
+  - [X] +save file i.e. importTemplate01 (?? which version, v3 or v2??)+
+  - [X] +create datablock.  [x] File Generation (Source Code). Structure (V6??).  IDE Call, choose logicad version with importer tool.+
+  - [X] Create BLANK OpenSyde Project
+  - [X] add 4CT device from pallette
+  - [X] add and connect 1x CAN bus to project
+  - [X] SAVE
+  - [X] Select device from tree, choose IMPORT TSP, select correct 4ct TSP package.
+  - [X] in 'ApplBootCore' leave all settings and only change IDE call.  Point to the 'C' perspective version of logiCAD that has a working import tool.  Save / Close edit window.
+  - [X] Save Project
+  - [X] From ApplBootCore mini window, launch IDE
+  - [ ] Confirm opens into logiCAD, test compile (need VPN access).  Should compile with no errors, still empty.
+  - [ ] 
+**** TODO GLOBALS
+:LOGBOOK:
+CLOCK: [2023-11-07 Tue 12:44]--[2023-11-07 Tue 12:50] =>  0:06
+:END:
+- [ ] CONSTANTS (CONSTANT)
+- [ ] Global_Variable
+- [ ] +Variable_Configuration+
+**** TODO STRUCTURES
+**** TODO ENUMS
+**** TODO FUNCTIONS
+**** TODO PROGRAMS
 *** TODO PLC Config Conversion & Testing
 Footnotes:
 *** TODO Complete System Testing
