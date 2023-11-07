@@ -6,13 +6,13 @@
 * NOV - WITS Project Conversion
 #+TOC: headlines 3
 #+BEGIN: clocktable :scope subtree :maxlevel 2
-#+CAPTION: Clock summary at [2023-11-07 Tue 13:51]
+#+CAPTION: Clock summary at [2023-11-07 Tue 14:18]
 | Headline                      | Time   |      |
 |-------------------------------+--------+------|
-| *Total time*                  | *2:31* |      |
+| *Total time*                  | *2:46* |      |
 |-------------------------------+--------+------|
-| NOV - WITS Project Conversion | 2:31   |      |
-| \_  Progress Tracker [33%]    |        | 2:31 |
+| NOV - WITS Project Conversion | 2:46   |      |
+| \_  Progress Tracker [33%]    |        | 2:46 |
 #+END:
 ** Summary
 Convert existing customer project from (ESX-IOxp + CodeSys) to (ESX-4CT + LogiCAD)
@@ -92,37 +92,66 @@ Footnotes:
     + Global_Variables (GVL)
     + PLC_PRG (PROGRAM)
     + Variable_Configuration (GVL)
-*** TODO CodeSys 2.3 EXPORT/IMPORT [0/6]
-**** TODO Program Template / Setup
+*** TODO CodeSys 2.3 EXPORT/IMPORT [1/6]
+:LOGBOOK:
+CLOCK: [2023-11-07 Tue 14:02]--[2023-11-07 Tue 14:17] =>  0:15
+:END:
+**** DONE Prepare blank OpenSyde Project / Shell [9/9]
+CLOSED: [2023-11-07 Tue 14:17]
 :LOGBOOK:
 CLOCK: [2023-11-07 Tue 12:40]--[2023-11-07 Tue 13:49] =>  1:09
 :END:
-- [-] Prepare blank OpenSyde Project
-  - [X] +add 4CT+
-  - [X] +add CAN1.  Join 4CT to CAN1.+
-  - [X] +save file i.e. importTemplate01 (?? which version, v3 or v2??)+
-  - [X] +create datablock.  [x] File Generation (Source Code). Structure (V6??).  IDE Call, choose logicad version with importer tool.+
-  - [X] Create BLANK OpenSyde Project
-  - [X] add 4CT device from pallette
-  - [X] add and connect 1x CAN bus to project
-  - [X] SAVE
-  - [X] Select device from tree, choose IMPORT TSP, select correct 4ct TSP package.
-  - [X] in 'ApplBootCore' leave all settings and only change IDE call.  Point to the 'C' perspective version of logiCAD that has a working import tool.  Save / Close edit window.
-  - [X] Save Project
-  - [X] From ApplBootCore mini window, launch IDE
-  - [ ] Confirm opens into logiCAD, test compile (need VPN access).  Should compile with no errors, still empty.
-  - [ ] 
-**** TODO GLOBALS
+- [X] Create BLANK OpenSyde Project
+- [X] add 4CT device from pallette
+- [X] add and connect 1x CAN bus to project
+- [X] SAVE
+- [X] Select device from tree, choose IMPORT TSP, select correct 4ct TSP package.
+- [X] in 'ApplBootCore' leave all settings and only change IDE call.  Point to the 'C' perspective version of logiCAD that has a working import tool.  Save / Close edit window.
+- [X] Save Project
+- [X] From ApplBootCore mini window, launch IDE
+- [X] Confirm opens into logiCAD, test compile (need VPN access).  Should compile with no errors, still empty.
+**** TODO GLOBALS [/]
 :LOGBOOK:
 CLOCK: [2023-11-07 Tue 12:44]--[2023-11-07 Tue 12:50] =>  0:06
 :END:
 - [ ] CONSTANTS (CONSTANT)
 - [ ] Global_Variable
-- [ ] +Variable_Configuration+
-**** TODO STRUCTURES
-**** TODO ENUMS
-**** TODO FUNCTIONS
-**** TODO PROGRAMS
+**** TODO STRUCTURES [0/6]
+- [ ] EDataChannel
+- [ ] ESerialChannel
+- [ ] TConfigData
+- [ ] TJ1939Msg
+- [ ] TWITSitem
+- [ ] errno_t
+**** TODO ENUMS [/]
+**** TODO FUNCTIONS [0/20]
+- [ ] ADD_PADDING
+- [ ] CHEM-UNIT_CONVERT
+- [ ] FIND_ITEM_BY_PRIORITY
+- [ ] F_FLOAT_TO_STRING
+- [ ] F_RANDOM_CONFIG
+- [ ] F_UNIT_TO_STRING
+- [ ] J1939_DECODE
+- [ ] J1939_ENCODE
+- [ ] J1939_READ_PGN
+- [ ] J1939_SEND_PGN
+- [ ] MEMCMP
+- [ ] MEMCPY
+- [ ] READ_CAN_MSG
+- [ ] REQUEST_PGN
+- [ ] SEND_CAN_MSG
+- [ ] SEND_WITS_CONFIG
+- [ ] SERIAL_PRINT
+- [ ] STRSIZE
+**** TODO PROGRAMS, 'sub' [0/7]
+- [ ] CAN2ErrorHandling
+- [ ] HANDLE_EEPROM
+- [ ] HANDLE_HMI_CAN
+- [ ] HANDLE_RS232_SERIAL
+- [ ] READ_WITS_CONFIG
+- [ ] SEND_WITS_CONFIG
+**** PROGRAMS, 'MAIN' [/]
+- [ ] PLC_PRG
 *** TODO PLC Config Conversion & Testing
 Footnotes:
 *** TODO Complete System Testing
