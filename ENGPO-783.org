@@ -5,14 +5,16 @@
 #+SETUPFILE: theme-readtheorg.setup
 * NOV - WITS Project Conversion
 #+TOC: headlines 3
-#+BEGIN: clocktable :scope subtree :maxlevel 2 :step day
-#+CAPTION: Clock summary at [2023-11-07 Tue 14:18]
-| Headline                      | Time   |      |
-|-------------------------------+--------+------|
-| *Total time*                  | *2:46* |      |
-|-------------------------------+--------+------|
-| NOV - WITS Project Conversion | 2:46   |      |
-| \_  Progress Tracker [33%]    |        | 2:46 |
+#+BEGIN: clocktable :scope subtree :maxlevel 3
+#+CAPTION: Clock summary at [2023-11-08 Wed 07:20]
+| Headline                              | Time   |      |      |
+|---------------------------------------+--------+------+------|
+| *Total time*                          | *2:46* |      |      |
+|---------------------------------------+--------+------+------|
+| NOV - WITS Project Conversion         | 2:46   |      |      |
+| \_  Progress Tracker [33%]            |        | 2:46 |      |
+| \_    Base Project Creation [8/8]     |        |      | 1:16 |
+| \_    CodeSys 2.3 EXPORT/IMPORT [1/6] |        |      | 1:30 |
 #+END:
 ** Summary
 Convert existing customer project from (ESX-IOxp + CodeSys) to (ESX-4CT + LogiCAD)
