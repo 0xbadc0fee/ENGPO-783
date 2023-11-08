@@ -5,7 +5,7 @@
 #+SETUPFILE: theme-readtheorg.setup
 * NOV - WITS Project Conversion
 #+TOC: headlines 3
-#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+BEGIN: clocktable :scope subtree :maxlevel 2 :step day
 #+CAPTION: Clock summary at [2023-11-07 Tue 14:18]
 | Headline                      | Time   |      |
 |-------------------------------+--------+------|
